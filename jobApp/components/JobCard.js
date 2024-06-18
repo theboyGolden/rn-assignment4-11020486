@@ -1,14 +1,17 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
 
-const JobCard = ({ jobTitle, company, location, featured }) => {
+const JobCard = ({ jobTitle, company, location, image }) => {
     return (
         <View>
             <View style={styles.card}>
+                <Image source={image} style={styles.jobCardImage} />
+                <View style={styles.carddetails}>
+                    <Text style={styles.title}>{jobTitle}</Text>
+                    <Text style={styles.company}>{company}</Text>
+                    <Text style={styles.location}>{location}</Text>
+                </View>
                 
-                <Text style={styles.title}>{jobTitle}</Text>
-                <Text style={styles.company}>{company}</Text>
-                <Text style={styles.location}>{location}</Text>
             </View> 
         </View>
         
@@ -18,6 +21,7 @@ const JobCard = ({ jobTitle, company, location, featured }) => {
 const styles = StyleSheet.create({    
     card: {
         backgroundColor: '#ffffff',
+        flexDirection: 'row',
         padding: 10,
         margin: 10,
         borderRadius: 8,
@@ -27,6 +31,11 @@ const styles = StyleSheet.create({
         shadowRadius: 4,
         elevation: 5,
     },
+
+    carddetails:{
+        marginLeft: 20
+    },
+
     title: {
         fontSize: 18,
         fontWeight: 'bold',
@@ -49,6 +58,11 @@ const styles = StyleSheet.create({
         top: 0,
         left: 0,
         zIndex: 1,
+    },
+
+    jobCardImage: {
+        width: 40,
+        height: 40
     },
 });
 

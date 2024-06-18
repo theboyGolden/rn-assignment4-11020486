@@ -14,7 +14,7 @@ export const Header = () => {
       </View>
       <View style={styles.column3}>
         <Text>
-          <Image source={require('../assets/apple.png')} style={styles.user} />
+          <Image source={require('../assets/profile.jpg')} style={styles.user} />
         </Text>
       </View>
     </View>
@@ -35,8 +35,12 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: '#000',
   },
+
+  email: {
+    color: 'gray'
+  },
   column1: {
-    flex: 3,
+    flex: 4,
   },
   column2: {
     flex: 2,
@@ -47,8 +51,8 @@ const styles = StyleSheet.create({
   user: {
     backgroundColor: '#fff',
     borderRadius: 50,
-    height: 60,
-    width: 60
+    height: 50,
+    width: 50
   },
 });
 
