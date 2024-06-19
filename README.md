@@ -34,4 +34,6 @@ This component renders individual job cards for popular jobs. Each card includes
 ![screenshot1](LogInPage.jpg)
 
 
+
+
 ![screenshot2](HomePage.jpg)
