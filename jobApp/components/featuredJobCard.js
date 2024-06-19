@@ -9,10 +9,18 @@ const FeaturedJobCard = ({ jobs }) => {
   return (
     <ScrollView horizontal contentContainerStyle={styles.scrollViewContent}>
       {jobs.map((job) => (
-        <View key={job.id} style={styles.card}>
-          <Image source={job.image} style={styles.CardIcon} />
-          <Text style={styles.title}>{job.jobTitle}</Text>
-          <Text style={styles.company}>{job.company}</Text>
+        <View key={job.id} style={[styles.card, { backgroundColor: job.color }]}>
+         <View style={styles.cardflex}>
+              <View style={styles.cardflex1}> 
+                <Image source={job.image} style={styles.CardIcon} />
+            </View>
+            <View style={styles.cardflex2}>
+                <Text style={styles.title}>{job.jobTitle}</Text>
+                <Text style={styles.company}>{job.company}</Text>
+            </View>
+         </View>
+         
+          
           <Text style={styles.location}>{job.location}</Text>
         </View>
       ))}
@@ -24,11 +32,26 @@ const styles = StyleSheet.create({
   scrollViewContent: {
     alignItems: 'center',
   },
+  cardflex: {
+    flexDirection: 'row',
+    marginBottom: 70,
+  },
+
+ cardflex1: {
+  marginRight: 10,
+  backgroundColor: '#fff',
+  padding: 10,
+  borderRadius: 15,
+ },
+
+ cardflex2: {
+  marginTop: 10,
+ },
+
   card: {
-    backgroundColor: '#87CEFA',
     padding: 10,
     margin: 10,
-    borderRadius: 8,
+    borderRadius: 20,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.25,
@@ -36,22 +59,22 @@ const styles = StyleSheet.create({
     elevation: 5,
     minWidth: 200,
   },
-
   CardIcon: {
     width: 40,
-    height:40
+    height: 40,
   },
   title: {
     fontSize: 18,
     fontWeight: 'bold',
+    color: '#fff'
   },
   company: {
     fontSize: 16,
-    color: '#555',
+    color: '#fff',
   },
   location: {
     fontSize: 14,
-    color: '#888',
+    color: '#fff',
   },
 });
 

@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     },
 
     title: {
-        fontSize: 18,
+        fontSize: 15,
         fontWeight: 'bold',
     },
     company: {

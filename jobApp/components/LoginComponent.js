@@ -3,11 +3,12 @@ import { StatusBar } from 'expo-status-bar';
 import { TextInput, StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 
 
-export function LoginComponent() {
+export function LoginComponent({ navigation }) {
   const [text, onChangeText] = React.useState(null);
   const [String, onChangeString] = React.useState(null);
   const handleSubmit = () => {
     console.log('Welcome Back');
+    navigation.navigate('Homepage');
   };
 
   return (
@@ -77,7 +78,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'left',
     justifyContent: 'center',
-    margin: 20,
+    // margin: 20,
+    padding: 20,
   },
 
   Usernamediv: {
