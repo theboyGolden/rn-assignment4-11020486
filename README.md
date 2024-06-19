@@ -31,7 +31,7 @@ This component renders individual job cards for popular jobs. Each card includes
 
 ## Screenshots of the app on IPhone X using Expo go App
 
-![screenshot1](LogInPage.jpg)
+![screenshot1](LoginPage.jpg)
 
 
 
